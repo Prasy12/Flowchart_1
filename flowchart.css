@@ -1,0 +1,21 @@
+ h1 {
+            text-align: center;
+        }
+
+h2 {
+            text-align: center;
+        }
+
+
+
+       
+table {
+        border-collapse: collapse;
+        width: 15%;
+       
+        
+    }
+td, th {
+        border: 0.063em solid black;
+        text-align: left;
+      }
