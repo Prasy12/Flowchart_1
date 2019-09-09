@@ -38,7 +38,13 @@
       t=0;
      }
      } 
-        if((isNaN(sid[x]))) 
+         if (strUser == 0) {
+        alert("Please select a Grade");
+        }
+        else if (strUser2 == 0) {
+        alert("Please select a division");
+        }
+        else if((isNaN(sid[x]))) 
         {
             alert("Enter a StudentID")
         }  
@@ -46,12 +52,6 @@
         {
             alert("Enter a Valid StudentID")
         } 
-        else if (strUser == 0) {
-            alert("Please select a Grade");
-        }
-        else if (strUser2 == 0) {
-            alert("Please select a division");
-        }
         else if ((isNaN(eng[x]))) {
             alert("Please enter some  marks for English ");
         }
@@ -115,7 +115,7 @@
        
     if(confirm("Do you wish to continue?!"))
     {
-            
+        //save it    
     }
     else
     {
