@@ -29,13 +29,13 @@
         var d = document.getElementById("div");
         var strUser2 = d.options[d.selectedIndex].value;
         var strUser3 = d.options[d.selectedIndex].text;
-        var t=1;
+        var b=1;
      for(var v=0;v<x;v++)
      {
       if(sid[v]==sid[x])
      {
       alert("Student ID already exists");
-      t=0;
+      b=0;
      }
      } 
          if (strUser == 0) {
@@ -73,14 +73,14 @@
             alert("Marks can't be greater than 100");
 
         }
-        else if(t==1) {
+        else if(b==1) {
            calculate();
 
         }
 
     }
 
-    function cleartext() {
+    function clearscreen() {
         document.getElementById("SID").value = "";
         document.getElementById("grades").value = "";
         document.getElementById("div").value = "";
@@ -93,25 +93,25 @@
     function calculate() {
 
         alert("Marks Entered");
-        var z = grad;
+        
         var sum = eng[x] + math[x] + science[x] + social[x];
         var avg = sum / ns;
         if (avg >= 60) {
-            pass[z]++;
-            totstud[z]++;
+            pass[grad]++;
+            totstud[grad]++;
             totalpass++;
             totstudents++;
 
         }
         else if (avg < 60) {
-            fail[z]++;
-            totstud[z]++;
+            fail[grad]++;
+            totstud[grad]++;
             totalfail++;
             totstudents++;
         }
-        pp[z] = ((pass[z] / totstud[z]) * 100);
+        pp[grad] = ((pass[grad] / totstud[grad]) * 100);
         x++;
-        cleartext();
+        clearscreen();
        
     if(confirm("Do you wish to continue?!"))
     {
@@ -120,7 +120,7 @@
     else
     {
         
-        display_array();
+        display();
     } 
     
    
@@ -128,7 +128,7 @@
     
 
 
-   function display_array()
+   function display()
     {
         
     var myTable = "<h1>Final Report</h1>";
